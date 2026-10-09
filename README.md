@@ -1,4 +1,4 @@
-# Registration-Form
+#Registration Form 
 
 import { useState } from "react";
 import "./App.css";
@@ -26,7 +26,7 @@ function App() {
         <button onClick={() => setData([])}>Delete All</button>
       </div>
 
-      <div className="right">
+  <div className="right">
         <h2>Registration Form</h2>
         <form onSubmit={submit}>
           <input id="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} required />
@@ -35,14 +35,14 @@ function App() {
           <button>Submit</button>
         </form>
 
-        <h3>Submitted Data</h3>
+  <h3>Submitted Data</h3>
         {data.map((d, i) => (
           <p key={i}>{d.name} - {d.age} - {d.email}
             <button onClick={() => setData(data.filter((_, j) => i !== j))}>Delete</button>
           </p>
         ))}
 
-        {show && <div className="filter">
+  {show && <div className="filter">
           <div><h3>Age &lt; 18</h3>
             {data.filter(d => +d.age < 18).map((d, i) => <p key={i}>{d.name} - {d.age}</p>)}
           </div>
