@@ -1,8 +1,6 @@
 #Registration Form 
-
 import { useState } from "react";
 import "./App.css";
-
 function App() {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
